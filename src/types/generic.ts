@@ -10,4 +10,5 @@ export enum ROUTES {
   PROJECTS = '/projects',
   ACCOUNT = '/account',
   PROFILES = '/profiles',
+  HOME = '/',
 }

@@ -1,9 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createWrapper } from 'next-redux-wrapper';
 
+import authReducer from '@/redux/reducers/auth.reducer';
+import toastReducer from '@/redux/reducers/toast.reducer';
+
 const makeStore = () =>
   configureStore({
-    reducer: {},
+    reducer: {
+      toast: toastReducer,
+      auth: authReducer,
+    },
   });
 
 export type AppStore = ReturnType<typeof makeStore>;
