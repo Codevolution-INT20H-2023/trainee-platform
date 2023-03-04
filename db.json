@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Andrii",
+      "lastName": "Vitrenko",
+      "email": "test@mail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "firstName": "Oleksandr",
+      "lastName": "Humeniuk",
+      "email": "test1@mail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 3,
+      "firstName": "Sviat",
+      "lastName": "Toxic",
+      "email": "test2@mail.com",
+      "password": "12345678"
+    }
+  ]
+}
