@@ -1,7 +1,17 @@
 import type { AppProps } from 'next/app';
 
+import Toast from '@/components/generic/toast';
+import { wrapper } from '@/redux';
+
 import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Toast />
+      <Component {...pageProps} />
+    </>
+  );
 }
+
+export default wrapper.withRedux(App);

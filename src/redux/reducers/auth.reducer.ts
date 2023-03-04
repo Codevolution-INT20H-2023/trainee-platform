@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { AuthService } from '@/services';
-import { AddUserAction, AuthStore } from '@/types/auth';
+import { AddUserAction, AuthStore, SetCurrentUserAction } from '@/types/auth';
 
 const initialState: AuthStore = {
   users: AuthService.getAll(),
@@ -16,8 +16,14 @@ const authSlice = createSlice({
       state.users.push(payload.user);
       state.currentUser = payload.user;
     },
+    setCurrentUser: (
+      state,
+      { payload }: PayloadAction<SetCurrentUserAction>,
+    ) => {
+      state.currentUser = payload.user;
+    },
   },
 });
 
-export const {} = authSlice.actions;
+export const { addUser, setCurrentUser } = authSlice.actions;
 export default authSlice.reducer;

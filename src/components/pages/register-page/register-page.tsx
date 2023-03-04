@@ -10,24 +10,25 @@ import {
   FormField,
   FormWrapper,
 } from '@/components/generic/form';
-import { setCurrentUser } from '@/redux/reducers/auth.reducer';
+import { addUser } from '@/redux/reducers/auth.reducer';
 import { showToast } from '@/redux/reducers/toast.reducer';
 import { AuthService } from '@/services';
-import { LoginForm } from '@/types/auth';
+import { RegisterForm } from '@/types/auth';
 import { TOAST_STATUS } from '@/types/toast';
 
 import { initialValues } from './constants';
 import { validationSchema } from './validation';
 
-const LoginPage: FC = () => {
-  const dispatch = useDispatch();
+const RegisterPage: FC = () => {
   const { push } = useRouter();
+  const dispatch = useDispatch();
 
   const onSubmit = useCallback(
-    (data: LoginForm) => {
+    ({ confirmPassword, ...data }: RegisterForm) => {
       try {
-        const { user } = AuthService.login(data);
-        dispatch(setCurrentUser({ user }));
+        const { user } = AuthService.register(data);
+        console.log(user);
+        dispatch(addUser({ user }));
         void push('/');
       } catch (e) {
         if (e instanceof Error) {
@@ -44,21 +45,30 @@ const LoginPage: FC = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
+      onSubmit={onSubmit}
       enableReinitialize
       validateOnChange
-      onSubmit={onSubmit}
     >
       {({ handleSubmit }) => (
         <FormWrapper onSubmit={handleSubmit}>
-          <FormField required name="email" label="Email" type="email" />
+          <FormField required name="firstName" type="text" label="First name" />
+          <FormField required name="lastName" type="text" label="Last name" />
+          <FormField required name="email" type="email" label="Email" />
           <FormField
             required
             name="password"
-            label="Password"
             type="password"
+            label="Password"
           />
+          <FormField
+            required
+            name="confirmPassword"
+            type="password"
+            label="Confirm Password"
+          />
+
           <FormButtonsContainer>
-            <Button type="submit" text="login" endIcon={<Send />} />
+            <Button type="submit" text="signup" endIcon={<Send />} />
           </FormButtonsContainer>
         </FormWrapper>
       )}
@@ -66,4 +76,4 @@ const LoginPage: FC = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
