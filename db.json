@@ -1,25 +1,75 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "firstName": "Andrii",
-      "lastName": "Vitrenko",
-      "email": "test@mail.com",
-      "password": "12345678a"
-    },
-    {
-      "id": 2,
-      "firstName": "Oleksandr",
-      "lastName": "Humeniuk",
-      "email": "test1@mail.com",
-      "password": "12345678b"
-    },
-    {
-      "id": 3,
-      "firstName": "Sviat",
-      "lastName": "Toxic",
-      "email": "test2@mail.com",
-      "password": "12345678c"
+  "users": [{
+    "id": 1,
+    "firstName": "dev",
+    "lastName": "Dev",
+    "email": "dev@gmail.com",
+    "password": "dev12312",
+    "public": true,
+    "avatar": "cringe",
+    "propositions": [],
+    "resume": {
+      "skills": [],
+      "education": [],
+      "hobbies": [],
+      "stack": [],
+      "contacts": [],
+      "personal": {
+        "age": 15,
+        "photo": "pohuy"
+      },
+      "languages": [],
+      "projects": [],
+      "description": "pohuy",
+      "position": "JavaScript Developer"
     }
-  ]
+  }, {
+    "id": 2,
+    "firstName": "dev",
+    "lastName": "Dev",
+    "email": "dev@gmail.com",
+    "password": "dev12312",
+    "public": true,
+    "avatar": "cringe",
+    "propositions": [],
+    "resume": {
+      "skills": [],
+      "education": [],
+      "hobbies": [],
+      "stack": [],
+      "contacts": [],
+      "personal": {
+        "age": 15,
+        "photo": "pohuy"
+      },
+      "languages": [],
+      "projects": [],
+      "description": "pohuy",
+      "position": "JavaScript Developer"
+    }
+  }, {
+    "id": 3,
+    "firstName": "dev",
+    "lastName": "Dev",
+    "email": "dev@gmail.com",
+    "password": "dev12312",
+    "public": true,
+    "avatar": "cringe",
+    "propositions": [],
+    "resume": {
+      "skills": [],
+      "education": [],
+      "hobbies": [],
+      "stack": [],
+      "contacts": [],
+      "personal": {
+        "age": 15,
+        "photo": "pohuy"
+      },
+      "languages": [],
+      "projects": [],
+      "description": "pohuy",
+      "position": "JavaScript Developer"
+    }
+  }]
 }
