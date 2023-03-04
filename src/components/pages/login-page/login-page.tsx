@@ -18,6 +18,7 @@ import { TOAST_STATUS } from '@/types/toast';
 
 import { initialValues } from './constants';
 import { validationSchema } from './validation';
+import { ROUTES } from '@/types/generic';
 
 const LoginPage: FC = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const LoginPage: FC = () => {
       try {
         const { user } = AuthService.login(data);
         dispatch(setCurrentUser({ user }));
-        void push('/');
+        void push(ROUTES.HOME);
       } catch (e) {
         if (e instanceof Error) {
           dispatch(

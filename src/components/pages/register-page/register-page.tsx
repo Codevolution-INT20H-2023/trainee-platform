@@ -18,6 +18,7 @@ import { TOAST_STATUS } from '@/types/toast';
 
 import { initialValues } from './constants';
 import { validationSchema } from './validation';
+import { ROUTES } from '@/types/generic';
 
 const RegisterPage: FC = () => {
   const { push } = useRouter();
@@ -29,7 +30,7 @@ const RegisterPage: FC = () => {
         const { user } = AuthService.register(data);
         console.log(user);
         dispatch(addUser({ user }));
-        void push('/');
+        void push(ROUTES.HOME);
       } catch (e) {
         if (e instanceof Error) {
           dispatch(
