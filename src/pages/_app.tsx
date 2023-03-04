@@ -1,7 +1,18 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 
-import '@/styles/globals.css';
+import Header from '@/components/generic/header';
+import { wrapper } from '@/redux';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import '../styles/globals.css';
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+    </>
+  );
 }
+
+export default wrapper.withRedux(App);
