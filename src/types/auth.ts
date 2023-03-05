@@ -1,4 +1,11 @@
-import { Resume } from '@/types/resume';
+import { StackList } from '@/types/project';
+import {
+  Contact,
+  Language,
+  PersonalInfo,
+  Project,
+  Resume,
+} from '@/types/resume';
 
 export interface User {
   id: number;
@@ -64,5 +71,64 @@ export interface RegisterForm {
   lastName: string;
   email: string;
   password: string;
+  confirmPassword: string;
+}
+
+export interface ChangePasswordAction {
+  password: string;
+}
+export interface ChangeUserInfoAction {
+  lastName: string;
+  firstName: string;
+  email: string;
+}
+
+export interface ChangeUserInfoFormData {
+  lastName: string;
+  firstName: string;
+  email: string;
+}
+
+export interface ChangePasswordFormData {
+  newPassword: string;
+  oldPassword: string;
+  confirmPassword: string;
+}
+
+export interface ChangeResumeInfo {
+  position: string;
+  description: string;
+  education: string[];
+  stack: StackList[];
+  contacts: Contact[];
+  personal: PersonalInfo;
+  languages: Language[];
+  projects: Project[];
+  skills: string[];
+}
+
+export interface SubmitChangeResumeInfo {
+  position: string;
+  description: string;
+  education: string[];
+  stack: StackList[];
+  contacts: Contact[];
+  age: number;
+  photo: string;
+  nationality: string;
+  languages: Language[];
+  projects: Project[];
+  skills: string[];
+}
+
+export interface InitialUserInfoData {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+
+export interface InitialPasswordData {
+  oldPassword: string;
+  newPassword: string;
   confirmPassword: string;
 }

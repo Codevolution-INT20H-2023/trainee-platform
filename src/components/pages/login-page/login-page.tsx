@@ -29,7 +29,7 @@ const LoginPage: FC = () => {
       try {
         const { user } = AuthService.login(data);
         dispatch(setCurrentUser({ user }));
-        void push(ROUTES.HOME);
+        void push(ROUTES.PROJECTS);
       } catch (e) {
         if (e instanceof Error) {
           dispatch(
@@ -51,12 +51,19 @@ const LoginPage: FC = () => {
     >
       {({ handleSubmit }) => (
         <FormWrapper onSubmit={handleSubmit}>
-          <FormField required name="email" label="Email" type="email" />
+          <FormField
+            required
+            name="email"
+            label="Email"
+            type="email"
+            InputLabelProps={{ shrink: true }}
+          />
           <FormField
             required
             name="password"
             label="Password"
             type="password"
+            InputLabelProps={{ shrink: true }}
           />
           <FormButtonsContainer>
             <Button type="submit" text="login" endIcon={<Send />} />

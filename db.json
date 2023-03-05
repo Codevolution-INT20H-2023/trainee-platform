@@ -1,8 +1,8 @@
 {
   "users": [{
     "id": 1,
-    "firstName": "dev",
-    "lastName": "Dev",
+    "firstName": "Mustang",
+    "lastName": "Markus",
     "email": "dev@gmail.com",
     "password": "dev12312",
     "public": true,
@@ -11,47 +11,52 @@
     "resume": {
       "skills": ["Critical thinking", "Problem solving", "Communication"],
       "education": ["KPI", "Coursera"],
-      "hobbies": ["Ride horses", "reading"],
       "stack": ["MongoDB", "Java", "SOLID", "JavaScript"],
       "contacts": [{
-        "name": "contact 1"
+        "name": "Github"
       }, {
-        "name":"contact 2",
-        "url": "some url"
+        "name":"Telegram",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
       }],
       "personal": {
-        "age": 15,
+        "age": 20,
         "nationality": "Ukrainian",
-        "photo": "pohuy"
+        "photo": "yo"
       },
       "languages": ["Ukrainian", "Spanish", "English"],
       "projects": [{
-        "name": "project 1",
+        "name": "FictAdvisor",
         "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
+        "responsibilities": [
+          {
+            "responsibility": "Manage company resources"
+          },
+          {
+            "responsibility": "Quality control"
+          }],
         "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "url": ""
+        "url": "https://github.com/fictadvisor"
       }, {
-        "name": "project 2",
+        "name": "Game development",
         "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
-        "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "url": ""
-      }, {
-        "name": "project 3",
-        "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
+        "responsibilities": [
+          {
+            "responsibility": "Manage company resources"
+          },
+          {
+            "responsibility": "Quality control"
+          }],
         "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
         "url": ""
       }],
-      "description": "pohuy",
+      "description": "I looooove programming!",
       "position": "JavaScript Developer"
     }
   }, {
     "id": 2,
     "firstName": "dev",
     "lastName": "Dev",
-    "email": "dev@gmail.com",
+    "email": "dev2@gmail.com",
     "password": "dev12312",
     "public": true,
     "avatar": "cringe",
@@ -64,18 +69,18 @@
       "contacts": [],
       "personal": {
         "age": 15,
-        "photo": "pohuy"
+        "photo": "photo"
       },
       "languages": [],
       "projects": [],
-      "description": "pohuy",
+      "description": "photo",
       "position": "JavaScript Developer"
     }
   }, {
     "id": 3,
     "firstName": "dev",
     "lastName": "Dev",
-    "email": "dev@gmail.com",
+    "email": "dev3@gmail.com",
     "password": "dev12312",
     "public": true,
     "avatar": "cringe",
@@ -88,12 +93,61 @@
       "contacts": [],
       "personal": {
         "age": 15,
-        "photo": "pohuy"
+        "photo": "photo"
       },
       "languages": [],
       "projects": [],
-      "description": "pohuy",
+      "description": "photo",
       "position": "JavaScript Developer"
     }
+  }],
+
+  "projects": [{
+    "id": 1,
+    "name": "TechStart",
+    "description": "This is very cool project",
+    "memberDescription": "Check this out!",
+    "displayUrl": "",
+    "stack": ["MongoDB", "Java", "React", "Next.js"],
+    "requests": []
+  }, {
+    "id": 2,
+    "name": "FICTAdvisor",
+    "description": "Student's platform of FICE Faculty of KPI",
+    "memberDescription": "https://github.com/fictadvisor",
+    "displayUrl": "https://github.com/fictadvisor",
+    "stack": ["MongoDB", "JavaScript", "React", "Next.js"],
+    "requests": []
+  }, {
+    "id": 3,
+    "name": "Hackathon HELP ME PLEASE!",
+    "description": "This is very cool project",
+    "memberDescription": "Check this out!",
+    "displayUrl": "",
+    "stack": ["Java", "Spring Boot"],
+    "requests": []
+  }],
+
+  "members": [{
+    "userId": 1,
+    "projectId": 1,
+    "startDate": "2023-03-05T00:00:00.000Z",
+    "endDate": "2023-03-06T00:00:00.000Z",
+    "role": "Team Lead",
+    "responsibilities": ["Create task"]
+  }, {
+    "userId": 1,
+    "projectId": 2,
+    "startDate": "2023-03-05T00:00:00.000Z",
+    "endDate": "2023-03-06T00:00:00.000Z",
+    "role": "Moderator",
+    "responsibilities": ["Kick members"]
+  }, {
+    "userId": 2,
+    "projectId": 2,
+    "startDate": "2023-03-05T00:00:00.000Z",
+    "endDate": "2023-03-06T00:00:00.000Z",
+    "role": "Member",
+    "responsibilities": ["Create task"]
   }]
 }

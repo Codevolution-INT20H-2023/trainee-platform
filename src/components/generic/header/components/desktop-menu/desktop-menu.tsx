@@ -8,12 +8,14 @@ import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import { Button } from '@mui/material';
 
 import NavLink from '@/components/generic/styles/nav-link';
+import { useAppSelector } from '@/hooks';
 import { LOCAL_STORAGE_KEYS, ROUTES } from '@/types/generic';
 
 import * as Styled from '../../header.styled';
 
 const DesktopMenu: FC = () => {
-  const isLoggedIn = true;
+  const { currentUser } = useAppSelector(state => state.auth);
+  const isLoggedIn = !!currentUser;
 
   const handleLogout = () => {
     localStorage.removeItem(LOCAL_STORAGE_KEYS.ACCESS_TOKEN);
@@ -24,40 +26,28 @@ const DesktopMenu: FC = () => {
     <Styled.Menu>
       <Button
         color="inherit"
-        startIcon={<EmojiObjectsOutlinedIcon />}
-        LinkComponent={NavLink}
-        href={ROUTES.STARTUPS}
-      >
-        Startups
-      </Button>
-      <Button
-        color="inherit"
         startIcon={<PeopleAltOutlinedIcon />}
         LinkComponent={NavLink}
         href={ROUTES.PROFILES}
       >
         Profiles
       </Button>
-      {isLoggedIn && (
-        <>
-          <Button
-            color="inherit"
-            startIcon={<BusinessCenterOutlinedIcon />}
-            LinkComponent={NavLink}
-            href={ROUTES.PROJECTS}
-          >
-            Projects
-          </Button>
-          <Button
-            color="inherit"
-            startIcon={<AccountCircleOutlinedIcon />}
-            LinkComponent={NavLink}
-            href={ROUTES.ACCOUNT}
-          >
-            Account
-          </Button>
-        </>
-      )}
+      <Button
+        color="inherit"
+        startIcon={<BusinessCenterOutlinedIcon />}
+        LinkComponent={NavLink}
+        href={ROUTES.PROJECTS}
+      >
+        Projects
+      </Button>
+      <Button
+        color="inherit"
+        startIcon={<AccountCircleOutlinedIcon />}
+        LinkComponent={NavLink}
+        href={ROUTES.ACCOUNT}
+      >
+        Account
+      </Button>
       <Button
         color="inherit"
         startIcon={isLoggedIn ? <LogoutIcon /> : <LoginIcon />}
