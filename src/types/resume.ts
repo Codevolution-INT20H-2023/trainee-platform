@@ -3,7 +3,6 @@ import { StackList } from '@/types/project';
 export interface Resume {
   skills: string[];
   education: string[];
-  hobbies: string[];
   stack: StackList[];
   contacts: Contact[];
   personal: PersonalInfo;
