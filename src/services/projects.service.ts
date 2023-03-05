@@ -4,7 +4,7 @@ import DB from '../../db.json';
 
 export class Projects {
   getAll(): Project[] {
-    return DB.projects;
+    return DB.projects as unknown as Project[];
   }
 }
 

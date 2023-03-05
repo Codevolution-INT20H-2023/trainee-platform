@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { Delete, Edit } from '@mui/icons-material';
-import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
+import FileOpenOutlinedIcon from '@mui/icons-material/FileOpenOutlined';
+import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid-premium';
 
 import Button from '@/components/generic/button';
 import NavLink from '@/components/generic/styles/nav-link';
@@ -26,7 +27,8 @@ export const columns: GridColDef[] = [
         <Styled.Actions>
           <Button
             text="Open"
-            startIcon={<Edit />}
+            style={{ color: 'white' }}
+            startIcon={<FileOpenOutlinedIcon />}
             LinkComponent={NavLink}
             href={`${ROUTES.PROJECTS}/${props.value.id}`}
           />

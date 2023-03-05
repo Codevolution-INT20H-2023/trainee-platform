@@ -3,11 +3,10 @@ import { useDispatch } from 'react-redux';
 import { Edit } from '@mui/icons-material';
 import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
 import ThumbUpOffAltOutlinedIcon from '@mui/icons-material/ThumbUpOffAltOutlined';
-import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
+import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid-premium';
 
 import Button from '@/components/generic/button';
 import NavLink from '@/components/generic/styles/nav-link';
-import { GridUserProject } from '@/components/pages/account-page/components/projects-tab/rows';
 import { addMember } from '@/redux/reducers/member.reducer';
 import {
   deleteProject,
@@ -42,7 +41,8 @@ export const columns: GridColDef[] = [
       props.value && (
         <Styled.Actions>
           <Button
-            text="OPEN"
+            text="Open"
+            style={{ color: 'white' }}
             startIcon={<Edit />}
             LinkComponent={NavLink}
             href={`${ROUTES.PROFILES}/${props.row.id}`}

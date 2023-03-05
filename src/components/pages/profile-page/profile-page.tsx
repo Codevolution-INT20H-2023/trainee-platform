@@ -210,7 +210,7 @@ const ProfilePage: FC = () => {
                           <ListItemIcon>
                             <ArrowRightAlt />
                           </ListItemIcon>
-                          <ListItemText>{resp}</ListItemText>
+                          <ListItemText>{resp.responsibility}</ListItemText>
                         </ListItem>
                       ))}
                     </List>
