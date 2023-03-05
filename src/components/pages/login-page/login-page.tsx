@@ -14,11 +14,11 @@ import { setCurrentUser } from '@/redux/reducers/auth.reducer';
 import { showToast } from '@/redux/reducers/toast.reducer';
 import { AuthService } from '@/services';
 import { LoginForm } from '@/types/auth';
+import { ROUTES } from '@/types/generic';
 import { TOAST_STATUS } from '@/types/toast';
 
 import { initialValues } from './constants';
 import { validationSchema } from './validation';
-import { ROUTES } from '@/types/generic';
 
 const LoginPage: FC = () => {
   const dispatch = useDispatch();

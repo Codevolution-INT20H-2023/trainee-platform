@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import styled from 'styled-components';
 import Link from 'next/link';
+import styled from 'styled-components';
 
 export const Wrapper = styled(Link)`
   text-decoration: none;

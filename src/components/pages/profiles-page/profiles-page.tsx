@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
-import { useAppSelector } from '@/hooks';
-import * as Styled from './profiles-page.styled';
 import ProfileCard from '@/components/generic/profile-card';
+import { useAppSelector } from '@/hooks';
+
+import * as Styled from './profiles-page.styled';
 
 const ProfilesPage: FC = () => {
   const { users } = useAppSelector(state => state.auth);
