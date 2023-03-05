@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ProjectService } from '@/services';
 import {} from '@/types/auth';
 import {
+  AddMemberAction,
   CreateProjectAction,
   DeleteProjectAction,
   ProjectStore,
@@ -28,8 +29,16 @@ const projectSlice = createSlice({
         requests: [],
       });
     },
+    deleteRequest: (state, { payload }: PayloadAction<AddMemberAction>) => {
+      const project = state.projects.find(p => p.id === payload.projectId);
+      if (project) {
+        const index = project.requests.indexOf(payload.userId);
+        project.requests.splice(index, 1);
+      }
+    },
   },
 });
 
-export const { deleteProject, createProject } = projectSlice.actions;
+export const { deleteProject, createProject, deleteRequest } =
+  projectSlice.actions;
 export default projectSlice.reducer;

@@ -103,7 +103,7 @@
     "description": "This is very cool project",
     "memberDescription": "Check this out!",
     "displayUrl": "",
-    "stack": [],
+    "stack": ["MongoDB", "Java"],
     "requests": []
   }],
 
@@ -112,7 +112,7 @@
     "projectId": 1,
     "startDate": "2023-03-05T00:00:00.000Z",
     "endDate": "2023-03-06T00:00:00.000Z",
-    "role": "TEAM_LEAD",
+    "role": "Team Lead",
     "responsibilities": ["Create task"]
   }]
 }

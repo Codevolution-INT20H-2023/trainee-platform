@@ -18,9 +18,9 @@ export enum StackList {
 }
 
 export enum Role {
-  TEAM_LEAD,
-  MODERATOR,
-  MEMBER,
+  TEAM_LEAD = 'Team Lead',
+  MODERATOR = 'Moderator',
+  MEMBER = 'Member',
 }
 
 export interface Member {
@@ -38,6 +38,13 @@ export interface ProjectStore {
 
 export interface MemberStore {
   members: Member[];
+}
+
+export interface DisplayUserProject {
+  id: number;
+  name: string;
+  stack: StackList[];
+  displayUrl: string;
 }
 
 export interface UserProject {
@@ -67,4 +74,9 @@ export interface CreateProjectAction {
   memberDescription: string;
   displayUrl: string;
   stack: StackList[];
+}
+
+export interface AddMemberAction {
+  userId: number;
+  projectId: number;
 }

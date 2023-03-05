@@ -1,8 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { MemberService } from '@/services';
-import {} from '@/types/auth';
-import { MemberStore, UpdateResponsibilitiesAction } from '@/types/project';
+import {
+  AddMemberAction,
+  MemberStore,
+  Role,
+  UpdateResponsibilitiesAction,
+} from '@/types/project';
 
 const initialState: MemberStore = {
   members: MemberService.getAll(),
@@ -23,8 +27,16 @@ const memberSlice = createSlice({
         member.responsibilities = payload.responsibilities;
       }
     },
+    addMember: (state, { payload }: PayloadAction<AddMemberAction>) => {
+      state.members.push({
+        ...payload,
+        startDate: new Date(),
+        role: Role.MEMBER,
+        responsibilities: [],
+      });
+    },
   },
 });
 
-export const { updateResponsibilities } = memberSlice.actions;
+export const { updateResponsibilities, addMember } = memberSlice.actions;
 export default memberSlice.reducer;
