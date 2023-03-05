@@ -13,7 +13,7 @@ class Auth {
   }
 
   getAll(): User[] {
-    return DB.users;
+    return DB.users as unknown as User[];
   }
 
   login({ password, email }: LoginPayload): AuthResponse {
@@ -27,7 +27,7 @@ class Auth {
       throw new Error('Incorrect password');
     }
 
-    return { user };
+    return { user: user as unknown as User };
   }
 
   register(payload: RegisterPayload): AuthResponse {
