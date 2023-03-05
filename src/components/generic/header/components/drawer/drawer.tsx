@@ -67,30 +67,26 @@ const Drawer: FC = () => {
                 Profiles
               </Button>
             </ListItem>
-            {isLoggedIn && (
-              <>
-                <ListItem>
-                  <Button
-                    color="inherit"
-                    startIcon={<BusinessCenterOutlinedIcon />}
-                    href={ROUTES.PROJECTS}
-                    LinkComponent={NavLink}
-                  >
-                    Projects
-                  </Button>
-                </ListItem>
-                <ListItem>
-                  <Button
-                    color="inherit"
-                    startIcon={<AccountCircleOutlinedIcon />}
-                    href={ROUTES.ACCOUNT}
-                    LinkComponent={NavLink}
-                  >
-                    Account
-                  </Button>
-                </ListItem>
-              </>
-            )}
+            <ListItem>
+              <Button
+                color="inherit"
+                startIcon={<BusinessCenterOutlinedIcon />}
+                href={ROUTES.PROJECTS}
+                LinkComponent={NavLink}
+              >
+                Projects
+              </Button>
+            </ListItem>
+            <ListItem>
+              <Button
+                color="inherit"
+                startIcon={<AccountCircleOutlinedIcon />}
+                href={ROUTES.ACCOUNT}
+                LinkComponent={NavLink}
+              >
+                Account
+              </Button>
+            </ListItem>
             <ListItem>
               <Button
                 color="inherit"

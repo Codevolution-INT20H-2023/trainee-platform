@@ -32,26 +32,22 @@ const DesktopMenu: FC = () => {
       >
         Profiles
       </Button>
-      {isLoggedIn && (
-        <>
-          <Button
-            color="inherit"
-            startIcon={<BusinessCenterOutlinedIcon />}
-            LinkComponent={NavLink}
-            href={ROUTES.PROJECTS}
-          >
-            Projects
-          </Button>
-          <Button
-            color="inherit"
-            startIcon={<AccountCircleOutlinedIcon />}
-            LinkComponent={NavLink}
-            href={ROUTES.ACCOUNT}
-          >
-            Account
-          </Button>
-        </>
-      )}
+      <Button
+        color="inherit"
+        startIcon={<BusinessCenterOutlinedIcon />}
+        LinkComponent={NavLink}
+        href={ROUTES.PROJECTS}
+      >
+        Projects
+      </Button>
+      <Button
+        color="inherit"
+        startIcon={<AccountCircleOutlinedIcon />}
+        LinkComponent={NavLink}
+        href={ROUTES.ACCOUNT}
+      >
+        Account
+      </Button>
       <Button
         color="inherit"
         startIcon={isLoggedIn ? <LogoutIcon /> : <LoginIcon />}

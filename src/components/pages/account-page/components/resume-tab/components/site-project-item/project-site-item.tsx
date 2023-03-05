@@ -39,7 +39,7 @@ const ProjectSiteItem: FC<ProjectItemsProps> = ({ index, project }) => {
             {project.responsibilities.map((item: any, innerIndex: number) => (
               <Styled.ArrayItem key={innerIndex}>
                 <FormField
-                  name={`projects.${index}.responsibilities.${innerIndex}`}
+                  name={`projects.${index}.userProjects.${innerIndex}`}
                   required
                   type="text"
                   label={`Responsibility #${innerIndex + 1}`}

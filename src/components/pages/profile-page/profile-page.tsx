@@ -205,8 +205,8 @@ const ProfilePage: FC = () => {
                     </Styled.ProjectTitle>
                     <Styled.Description>Responsibilities</Styled.Description>
                     <List>
-                      {project.responsibilities.map(resp => (
-                        <ListItem key={resp}>
+                      {project.responsibilities.map((resp, index) => (
+                        <ListItem key={index}>
                           <ListItemIcon>
                             <ArrowRightAlt />
                           </ListItemIcon>
@@ -216,21 +216,6 @@ const ProfilePage: FC = () => {
                     </List>
                   </Styled.Project>
                 ))}
-              </Styled.ContentSectionBody>
-            </Styled.ContentSection>
-            <Styled.ContentSection>
-              <Styled.ContentSectionTitle>Hobbies</Styled.ContentSectionTitle>
-              <Styled.ContentSectionBody>
-                <List>
-                  {selectedUser.resume?.hobbies.map(hobby => (
-                    <ListItem key={hobby}>
-                      <ListItemIcon>
-                        <Spa />
-                      </ListItemIcon>
-                      <ListItemText>{hobby}</ListItemText>
-                    </ListItem>
-                  ))}
-                </List>
               </Styled.ContentSectionBody>
             </Styled.ContentSection>
             <Styled.ContentSection>
