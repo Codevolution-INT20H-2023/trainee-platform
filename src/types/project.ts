@@ -9,6 +9,11 @@ export interface Project {
 
 export enum StackList {
   MONGODB = 'MongoDB',
+  JAVA = 'Java',
+  GITHUB = 'GitHub',
+  GIT = 'Git',
+  SOLID = 'SOLID',
+  JAVASCRIPT = 'JavaScript',
 }
 
 export enum Role {
