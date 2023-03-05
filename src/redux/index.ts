@@ -9,6 +9,8 @@ const makeStore = () =>
     reducer: {
       toast: toastReducer,
       auth: authReducer,
+      projects: projectReducer,
+      members: memberReducer,
     },
   });
 

@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,13 +16,15 @@ import {
 } from '@mui/material';
 
 import NavLink from '@/components/generic/styles/nav-link';
+import { useAppSelector } from '@/hooks';
 import { LOCAL_STORAGE_KEYS, ROUTES } from '@/types/generic';
 
 const drawerWidth = 320;
 
 const Drawer: FC = () => {
   const [open, setOpen] = useState(false);
-  const isLoggedIn = true;
+  const { currentUser } = useAppSelector(state => state.auth);
+  const isLoggedIn = !!currentUser;
 
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
@@ -56,16 +57,6 @@ const Drawer: FC = () => {
           onClick={closeDrawer}
         >
           <List>
-            <ListItem>
-              <Button
-                color="inherit"
-                startIcon={<EmojiObjectsOutlinedIcon />}
-                LinkComponent={NavLink}
-                href={ROUTES.STARTUPS}
-              >
-                Startups
-              </Button>
-            </ListItem>
             <ListItem>
               <Button
                 color="inherit"

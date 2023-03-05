@@ -35,5 +35,7 @@ export interface Project {
   url: string;
   startDate: Date;
   endDate: Date;
-  responsibilities: string[];
+  responsibilities: {
+    responsibility: string;
+  }[];
 }

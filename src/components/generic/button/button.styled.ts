@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled(Box)`
   position: relative;
+  gap: 1rem;
 `;
 
 export const Loader = styled(CircularProgress)`
