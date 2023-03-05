@@ -15,6 +15,12 @@ export enum StackList {
   GIT = 'Git',
   SOLID = 'SOLID',
   JAVASCRIPT = 'JavaScript',
+  NEXTJS = 'Next.js',
+  NESTJS = 'Nest.js',
+  REACT = 'React',
+  VUEJS = 'Vue.js',
+  REDUX = 'Redux',
+  SPRING_BOOT = 'Spring Boot',
 }
 
 export enum Role {

@@ -108,7 +108,23 @@
     "description": "This is very cool project",
     "memberDescription": "Check this out!",
     "displayUrl": "",
-    "stack": ["MongoDB", "Java"],
+    "stack": ["MongoDB", "Java", "React", "Next.js"],
+    "requests": []
+  }, {
+    "id": 2,
+    "name": "FICTAdvisor",
+    "description": "Student's platform of FICE Faculty of KPI",
+    "memberDescription": "https://github.com/fictadvisor",
+    "displayUrl": "https://github.com/fictadvisor",
+    "stack": ["MongoDB", "JavaScript", "React", "Next.js"],
+    "requests": []
+  }, {
+    "id": 3,
+    "name": "Hackathon HELP ME PLEASE!",
+    "description": "This is very cool project",
+    "memberDescription": "Check this out!",
+    "displayUrl": "",
+    "stack": ["Java", "Spring Boot"],
     "requests": []
   }],
 
@@ -118,6 +134,20 @@
     "startDate": "2023-03-05T00:00:00.000Z",
     "endDate": "2023-03-06T00:00:00.000Z",
     "role": "Team Lead",
+    "responsibilities": ["Create task"]
+  }, {
+    "userId": 1,
+    "projectId": 2,
+    "startDate": "2023-03-05T00:00:00.000Z",
+    "endDate": "2023-03-06T00:00:00.000Z",
+    "role": "Moderator",
+    "responsibilities": ["Kick members"]
+  }, {
+    "userId": 2,
+    "projectId": 2,
+    "startDate": "2023-03-05T00:00:00.000Z",
+    "endDate": "2023-03-06T00:00:00.000Z",
+    "role": "Member",
     "responsibilities": ["Create task"]
   }]
 }
