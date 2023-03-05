@@ -28,14 +28,14 @@ export interface GridMemberProject {
 }
 
 export const columns: GridColDef[] = [
-  { field: 'firstName', headerName: 'First Name', width: 50 },
-  { field: 'lastName', headerName: 'Last Name', width: 50 },
+  { field: 'firstName', headerName: 'First Name', width: 150 },
+  { field: 'lastName', headerName: 'Last Name', width: 150 },
   { field: 'email', headerName: 'Email', width: 300 },
   { field: 'role', headerName: 'Role', width: 150 },
   { field: 'startDate', headerName: 'Start Date', width: 150 },
   {
     field: 'project',
-    width: 600,
+    width: 200,
     headerName: 'Editing',
     renderCell: (props: GridRenderCellParams<GridMemberProject>) =>
       props.value && (

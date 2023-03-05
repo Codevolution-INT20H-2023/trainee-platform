@@ -29,7 +29,7 @@ const LoginPage: FC = () => {
       try {
         const { user } = AuthService.login(data);
         dispatch(setCurrentUser({ user }));
-        void push(ROUTES.HOME);
+        void push(ROUTES.PROJECTS);
       } catch (e) {
         if (e instanceof Error) {
           dispatch(

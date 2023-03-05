@@ -20,7 +20,8 @@ export const columns: GridColDef[] = [
       props.value && (
         <Styled.Actions>
           <Button
-            text="OPEN"
+            style={{ color: 'white' }}
+            text="Open"
             startIcon={<Edit />}
             LinkComponent={NavLink}
             href={`${ROUTES.PROJECTS}/${props.value.id}`}

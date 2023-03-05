@@ -1,8 +1,8 @@
 {
   "users": [{
     "id": 1,
-    "firstName": "dev",
-    "lastName": "Dev",
+    "firstName": "Mustang",
+    "lastName": "Markus",
     "email": "dev@gmail.com",
     "password": "dev12312",
     "public": true,
@@ -11,40 +11,45 @@
     "resume": {
       "skills": ["Critical thinking", "Problem solving", "Communication"],
       "education": ["KPI", "Coursera"],
-      "hobbies": ["Ride horses", "reading"],
       "stack": ["MongoDB", "Java", "SOLID", "JavaScript"],
       "contacts": [{
-        "name": "contact 1"
+        "name": "Github"
       }, {
-        "name":"contact 2",
-        "url": "some url"
+        "name":"Telegram",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
       }],
       "personal": {
-        "age": 15,
+        "age": 20,
         "nationality": "Ukrainian",
-        "photo": "pohuy"
+        "photo": "yo"
       },
       "languages": ["Ukrainian", "Spanish", "English"],
       "projects": [{
-        "name": "project 1",
+        "name": "FictAdvisor",
         "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
+        "responsibilities": [
+          {
+            "responsibility": "Manage company resources"
+          },
+          {
+            "responsibility": "Quality control"
+          }],
         "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "url": ""
+        "url": "https://github.com/fictadvisor"
       }, {
-        "name": "project 2",
+        "name": "Game development",
         "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
-        "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "url": ""
-      }, {
-        "name": "project 3",
-        "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
-        "responsibilities": ["res 1", "res 2"],
+        "responsibilities": [
+          {
+            "responsibility": "Manage company resources"
+          },
+          {
+            "responsibility": "Quality control"
+          }],
         "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
         "url": ""
       }],
-      "description": "pohuy",
+      "description": "I looooove programming!",
       "position": "JavaScript Developer"
     }
   }, {
@@ -64,11 +69,11 @@
       "contacts": [],
       "personal": {
         "age": 15,
-        "photo": "pohuy"
+        "photo": "photo"
       },
       "languages": [],
       "projects": [],
-      "description": "pohuy",
+      "description": "photo",
       "position": "JavaScript Developer"
     }
   }, {
@@ -88,11 +93,11 @@
       "contacts": [],
       "personal": {
         "age": 15,
-        "photo": "pohuy"
+        "photo": "photo"
       },
       "languages": [],
       "projects": [],
-      "description": "pohuy",
+      "description": "photo",
       "position": "JavaScript Developer"
     }
   }],
