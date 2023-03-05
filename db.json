@@ -9,17 +9,41 @@
     "avatar": "cringe",
     "propositions": [],
     "resume": {
-      "skills": [],
-      "education": [],
-      "hobbies": [],
-      "stack": [],
-      "contacts": [],
+      "skills": ["Critical thinking", "Problem solving", "Communication"],
+      "education": ["KPI", "Coursera"],
+      "hobbies": ["Ride horses", "reading"],
+      "stack": ["MongoDB", "Java", "SOLID", "JavaScript"],
+      "contacts": [{
+        "name": "contact 1"
+      }, {
+        "name":"contact 2",
+        "url": "some url"
+      }],
       "personal": {
         "age": 15,
+        "nationality": "Ukrainian",
         "photo": "pohuy"
       },
-      "languages": [],
-      "projects": [],
+      "languages": ["Ukrainian", "Spanish", "English"],
+      "projects": [{
+        "name": "project 1",
+        "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "responsibilities": ["res 1", "res 2"],
+        "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "url": ""
+      }, {
+        "name": "project 2",
+        "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "responsibilities": ["res 1", "res 2"],
+        "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "url": ""
+      }, {
+        "name": "project 3",
+        "endDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "responsibilities": ["res 1", "res 2"],
+        "startDate": "Sat Mar 04 2023 21:27:39 GMT+0100",
+        "url": ""
+      }],
       "description": "pohuy",
       "position": "JavaScript Developer"
     }
